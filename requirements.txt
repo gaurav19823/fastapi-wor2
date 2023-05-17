@@ -1,6 +1,6 @@
 anyio==3.6.2
 fastapi==0.95.2
-gensim==4.3.1
+gensim
 gunicorn==20.1.0
 idna==3.4
 numpy==1.24.3
