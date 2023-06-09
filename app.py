@@ -18,5 +18,6 @@ app.add_middleware(
 @app.post("/similar")
 async def get_similar_words(request: Request, word: str = Form(...)):
     similar_words = model.most_similar(word, topn=5)
+    similar_words = [word[0] for word in similar_words]
     return {"similar_words": similar_words}
 #uvicorn app:app --reload
